@@ -3,7 +3,7 @@ local text = _G.CodexSpooferText or nil
 local powered = _G.CodexSpooferPoweredBy or nil
 
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-    Text = "<font face='ModernBanger'>By Anas#123</font>";
+    Text = "By Anas#123";
     Duration = 4;
     Color = Color3.new(1, 1, 0);
 })
@@ -92,7 +92,6 @@ else
                 end)
             end
         end
-        _G.LoadedCodexSwitcherHooks = {}
     end
 
     local iconConnections = {}
@@ -153,9 +152,10 @@ else
         if title1 and _G.LoadedCodexSwitcher ~= patch then
             title1:Disconnect()
         end
-        gui.navbar.main.poweredBy.Text = powered
-    end)
+        gui
 
-    gui.navbar.main.poweredBy.Text = powered
-    _G.LoadedCodexSwitcherHooks = {["Icons"] = iconConnections }
-end
+    -- Display text "Anas #606" in the middle of the screen
+    local billboardGui = Instance.new("BillboardGui")
+    billboardGui.Parent = game.Players.LocalPlayer.PlayerGui
+    billboardGui.Size = UDim2.new(0, 200, 0, 50)
+    billboardGui.StudsOffset = Vector3.new(0
